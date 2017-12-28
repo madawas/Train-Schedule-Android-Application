@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 7
+    buildToolsVersion "27.0.2"
+
+    defaultConfig {
+        applicationId "lk.icta.mobile.apps.railway"
+        minSdkVersion 5
+        targetSdkVersion 5
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+}
